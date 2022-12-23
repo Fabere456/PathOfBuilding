@@ -2221,9 +2221,7 @@ function calcs.offence(env, actor, activeSkill)
 
 			local baseCritFromMainHand = skillModList:Flag(cfg, "BaseCritFromMainHand")
 			if baseCritFromMainHand then
-				if actor.itemList["Weapon 1"] and actor.itemList["Weapon 1"].weaponData and actor.itemList["Weapon 1"].weaponData[1] then
-					baseCrit = actor.weaponData1.CritChance
-				end
+				baseCrit = actor.weaponData1.CritChance
 			end
 
 			if critOverride == 100 then
@@ -2535,7 +2533,7 @@ function calcs.offence(env, actor, activeSkill)
 								resist = enemyDB:Sum("BASE", nil, damageType.."Resist")
 								pen = skillModList:Sum("BASE", cfg, "ChaosPenetration")
 							end
-							resist = m_max(m_min(resist, data.misc.EnemyMaxResist), data.misc.ResistFloor)
+							resist = m_max(m_min(enemyDB:Override(nil, damageType.."Resist") or resist, data.misc.EnemyMaxResist), data.misc.ResistFloor)
 						end
 						if skillFlags.projectile then
 							takenInc = takenInc + enemyDB:Sum("INC", nil, "ProjectileDamageTaken")

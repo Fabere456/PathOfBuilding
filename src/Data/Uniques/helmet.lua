@@ -493,10 +493,11 @@ Aspect of the Spider inflicts Spider's Webs and Hinder every 0.5 Seconds instead
 Sandstorm Visage
 Necromancer Circlet
 League: Sanctum
+Source: Drops from unique{Lycia, Herald of the Scourge} in normal{The Beyond}
 (8-10)% increased Cast Speed
 (200-250)% increased Energy Shield
 Avoid interruption from Stuns while Casting
-Base Critical Strike Chance of Spells is the Critical Strike Chance of your Main Hand Weapon
+Base Critical Strike Chance of Spells is the Critical Strike Chance of Main Hand Weapon
 Cannot deal Critical Strikes with Attacks
 ]],[[
 Flamesight
